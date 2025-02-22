@@ -1,4 +1,3 @@
-
 <?php
     try {
         if($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -8,15 +7,48 @@
             $age = $obj->Age;
             $address = $obj->Address;
             $gender = $obj->Gender;
-            $firstLetter = strtoupper($lname[0]);
 
-            if ($gender == "Male") {
+            $namePattern = "/^[A-Za-z\-'.\s]{2,50}$/";
+            $agePattern = "/^[0-9]{1,2}$/"; 
+
+            if (empty($fname)) {
+                echo "First Name is required.";
+                exit;
+            } else if (!preg_match($namePattern, $fname)) {
+                echo "First Name should only contain letters.";
+                exit;
+            }
+    
+            if (empty($lname)) {
+                echo "Last Name is required.";
+                exit;
+            } else if (!preg_match($namePattern, $lname)) {
+                echo "Last Name should only contain letters.";
+                exit;
+            } else {
+                $firstLetter = strtoupper ($lname[0]);
+            }
+    
+            if (empty($age)) {
+                echo "Age is required.";
+                exit;
+            } else if (!preg_match($agePattern, $age)) {
+                echo "Age should only contain numbers.";
+                exit;
+            }
+
+            if (empty($address)) {
+                echo "Address is required.";
+                exit;
+            }
+            
+            if ($gender === "Male") {
                 if ($firstLetter >= "A" && $firstLetter <= "M") {
                     $class = "Class A";
                 } else {
                     $class = "Class C";
                 }
-            } else if ($gender == "Female") {
+            } else if ($gender === "Female") {
                 if ($firstLetter >= "A" && $firstLetter <= "M") {
                     $class = "Class D";
                 } else {
@@ -109,8 +141,8 @@
                     </div>
 
                     <div class="input-group">
-                        <i class="far fa-calendar"></i>
-                        <input type="text" id="age" name="age" placeholder="Age" />
+                    <i class="fa-solid fa-cake-candles"></i>
+                        <input type="number" id="age" name="age" placeholder="Age" min="1" max="99"/>
                     </div>
 
                     <div class="gender-group">

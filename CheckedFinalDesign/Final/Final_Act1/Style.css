@@ -154,15 +154,17 @@ body {
 
 /* Form Card Styles */
 .form-card {
-  width: clamp(320px, 50vw, 500px); 
+  width: clamp(280px, 45vw, 450px);
   background: var(--white);
   border-radius: 20px;
-  padding: clamp(1rem, 2.5vw, 2rem);  
+  padding: clamp(0.8rem, 2vw, 1.5rem); 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   z-index: 2;
   animation: slideIn 0.5s ease-out;
   margin-left: 1%;
   margin-right: 5%;
+  max-height: 80vh; 
+  min-height: min-content; 
 }
 
 @keyframes slideIn {
@@ -216,6 +218,15 @@ body {
 }
 
 input[type="text"] {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  padding-left: 2.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: all 0.3s ease;
+}
+input[type="number"] {
   width: 100%;
   padding: clamp(0.8rem, 2vw, 1rem);
   padding-left: 2.8rem;
