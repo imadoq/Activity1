@@ -105,7 +105,7 @@
         <div class="main-container-fluid">
             <!-- Left Side Content -->
             <div class="left-content">
-                <h1>University of Santo Tomas</h1>
+                <h1>test</h1>
                 <p class="subtitle">España, Manila, Philippines</p>
                 <div class="university-info">
                     <p>The University of Santo Tomas, established in 1611, is Asia's oldest existing university.</p>
