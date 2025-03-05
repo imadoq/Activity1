@@ -166,6 +166,7 @@ body {
   max-height: 80vh; 
   min-height: min-content; 
 }
+/* Animation for the form card */
 
 @keyframes slideIn {
   from {
