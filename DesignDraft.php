@@ -96,7 +96,7 @@
         </video>
         <!-- sticky Header -->
         <header class="sticky-header">
-            <div class="header-content">
+            <div class="header-content">  <!-- to be changed as a header to avoid div redundant codes -->
                 <div class="logo-container">
                     <img src="images/USTLogo.png" alt="UST Logo" class="ust-logo">  
         </header>
@@ -163,7 +163,7 @@
 
         <!-- footer -->
         <footer class="footer-scrollable">
-            <div class="footer-content">
+            <div class="footer-content"> <!-- to be changed footer to avoid div rebundancy -->
                 <div class="footer-section">
                     <h3>About UST</h3>
                     <p>The University of Santo Tomas continues its tradition of academic excellence 
